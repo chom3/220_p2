@@ -1,0 +1,29 @@
+Name:		Hom, Corey
+B-Number:	B00398193
+Email:	    chom3@binghamton.edu
+
+The code is self documenting, but to use:
+./bcd-float
+input will come up, put in any valid number (will give conversion error otherwise)
+Observe results.
+
+Sample code that uses same inputs as document:
+chom3@220_p2:~/workspace $ ./bcd-float 
+enter decimal number without space (^D for EOF): 1.23
+bcd float hex = "0x2000000000000123"; back to string as "1.23"
+enter decimal number without space (^D for EOF): -1.1234567
+bcd float hex = "0xf000000011234567"; back to string as "-1.1234567"
+enter decimal number without space (^D for EOF): -1.2345678
+bcd float hex = "0xf000000012345678"; back to string as "-1.2345678"
+enter decimal number without space (^D for EOF): -1.12345678
+conversion error
+enter decimal number without space (^D for EOF): 123456789012345
+bcd float hex = "0x123456789012345"; back to string as "123456789012345"
+enter decimal number without space (^D for EOF): 123456789012.345
+bcd float hex = "0x3123456789012345"; back to string as "123456789012.345"
+enter decimal number without space (^D for EOF): -123456789012.345
+bcd float hex = "0xb123456789012345"; back to string as "-123456789012.345"
+enter decimal number without space (^D for EOF): -123456789012.3456
+conversion error
+enter decimal number without space (^D for EOF): ^C
+
